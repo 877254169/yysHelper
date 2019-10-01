@@ -20,6 +20,7 @@ print("匹配花费时间={}".format(t2-t1))
 
 print("res.max() = {}".format(res.max()))
 
+#判读相似度
 res2 = cv2.matchTemplate(img, tmp, cv2.TM_CCOEFF_NORMED)
 print("res2.max() = {}".format(res2.max()))
 
