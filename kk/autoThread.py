@@ -21,6 +21,7 @@ def run(model, limitNum):
     if limitNum != -1:
         cnt = 1
         while runFlag and cnt <= limitNum:
+            print("--------------{}--------------".format(cnt))
             if model == "御魂":
                 yuhun()
             elif model == "觉醒":
@@ -33,6 +34,7 @@ def run(model, limitNum):
     else:
         cnt = 1
         while runFlag:
+            print("--------------{}--------------".format(cnt))
             if model == "御魂":
                 yuhun()
             elif model == "觉醒":
