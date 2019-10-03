@@ -1,5 +1,5 @@
 pyinstaller 安装：
-// 加 -w 没用黑窗口
+// 加 -w 没有黑窗口
 pyinstaller -F -w -i kk\resource\img\icon.ico kk\main.py -p kk\kk.py -p kk\autoThread.py -p kk\imgUtil.py -p kk\sysUtil.py -p C:\Windows\System32\downlevel
 
 把resource文件夹和config.ini一起放到dist目录下，否则找不到文件报错
