@@ -57,6 +57,8 @@ def yuhun():
     while runFlag:
         if yuhun_while(img_yuhun_vicotry):
             break
+        elif yuhun_while(img_yuhun_end):
+            return
     # 结束
     while runFlag:
         if yuhun_while(img_yuhun_end):
