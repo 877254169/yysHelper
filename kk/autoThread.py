@@ -54,9 +54,14 @@ def yuhun():
     while runFlag:
         if yuhun_while(img_yuhun_start):
             break
-    # 准备，sleep 8s，等待动画
-    time.sleep(8)
-    yuhun_while(img_ready)
+    # 准备，sleep 10s，等待动画
+    print("等待10s")
+    time.sleep(10)
+    print("等待结束")
+    # 尝试匹配3次
+    for i in range(4):
+        if yuhun_while(img_ready):
+            break
     # 胜利
     while runFlag:
         if yuhun_while(img_yuhun_vicotry):
