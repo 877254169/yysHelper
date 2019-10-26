@@ -6,6 +6,7 @@ import os
 runFlag = True
 taskFlag = False
 
+img_ready = ".\\resource\\img\\ready.png"
 img_yuhun_start = ".\\resource\\img\\yuhun_start.png"
 img_yuhun_vicotry = ".\\resource\\img\\yuhun_victory.png"
 img_yuhun_wait = ".\\resource\\img\\yuhun_wait.png"
@@ -53,6 +54,9 @@ def yuhun():
     while runFlag:
         if yuhun_while(img_yuhun_start):
             break
+    # 准备，sleep 8s，等待动画
+    time.sleep(8)
+    yuhun_while(img_ready)
     # 胜利
     while runFlag:
         if yuhun_while(img_yuhun_vicotry):
@@ -103,7 +107,9 @@ def yuhun_while(temp_path):
         if temp_path == img_yuhun_end:
             time.sleep(1)
         sysUtil.clickLeftCur()
-        if temp_path == img_yuhun_start:
+        if temp_path == img_ready:
+            print("准备：({}, {})".format(px, py))
+        elif temp_path == img_yuhun_start:
             print("御魂-开始：({}, {})".format(px, py))
         elif temp_path == img_yuhun_vicotry:
             print("御魂-胜利：({}, {})".format(px, py))
